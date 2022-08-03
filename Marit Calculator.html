@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Merit Calculator</title>
+    </head>
+    <body>
+    <script language="JavaScript">
+    function Result() 
+    { 
+        Board=document.form1.Board.value;
+        Gujcet=document.form1.Gujcet.value;
+        B2=Board/2;
+        G2=Gujcet/2;
+        Merith=parseFloat(B2)+parseFloat(G2);
+        Merit=((100-Merith)*35000)/100;
+        document.form1.F.value=Merit
+      }
+    //-->
+    </script>
+    <br>   
+    <form method="post" name="form1">        
+        <table align="center" border="0" height="10px">
+            <!--R-->
+            <tr>
+                <td align="middle" colspan="2">
+                  Merit Calculator
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="2">
+                  <strong>{NOTE:- MERIT RANK IS PREDICTED BASED ON GUJCET 50% & BOARD 50%.AND ACPC REG. APPROX (35000)}</strong>
+                </td>
+            </tr>
+            <!--R1-->
+            <tr>
+                <td>12th Board SCIENCE THEORY PERCENTILE RANK:-</td>
+                <td><input name="Board"placeholder="Enter 12th Board SCIENCE THEORY PERCENTILE RANK" type="number" ></td>
+            </tr>
+<!--R2-->
+            <tr>
+                <td>GUJCET PERCENTILE RANK:-</td>
+                <td><input name="Gujcet" placeholder="Enter GUJCET PERCENTILE RANK"type="number"></td>
+            </tr>
+            <!--R3-->
+              <tr>
+                <td align="middle" colspan="1"><input onclick="Result()" type="button" value="Calculate"></td>
+                <td align="middle" colspan="1"><input type="reset" value="Reset"></td>
+            </tr>
+            
+
+
+            <tr>
+                <td>MERIT NUMBER </td>
+                <td><input name="F"type="number"></td>
+            </tr>
+          
+          
+          
+          
+          
+            
+        </table>        
+    </form>    
+    </body>
+</html>
+
+
+
