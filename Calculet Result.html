@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calculet Result</title>
+    </head>
+    <body>
+    <script language="JavaScript">
+    function Result() 
+    {   //physics
+        //10
+        aPhysics=document.form1.a.value;
+        bPhysics=document.form1.b.value;
+        c1Physics=parseInt(aPhysics)+parseInt(bPhysics);
+        d1Physics=c1Physics*0.35715;
+        //11
+        a11Physics=document.form1.a11.value;
+        a12Physics=document.form1.a12.value;
+        c2Physics=parseInt(a11Physics)+parseInt(a12Physics);
+        d2Physics=c2Physics*0.25;
+        //12
+        a21Physics=document.form1.a21.value;
+        a22Physics=document.form1.a22.value;
+        c3Physics=parseInt(a21Physics)+parseInt(a22Physics);
+        d3Physics=c3Physics*0.2;
+        //total
+        FPhysics=parseInt(d1Physics)+parseInt(d2Physics)+parseInt(d3Physics);
+
+        document.form1.af.value =FPhysics
+        //chemisty
+        //10
+        achemistry=document.form1.a.value;
+        bchemistry=document.form1.b.value;
+        c1chemistry=parseInt(achemistry)+parseInt(bchemistry);
+        d1chemistry=c1chemistry*0.35715;
+        //11
+        b11chemistry=document.form1.b11.value;
+        b12chemistry=document.form1.b12.value;
+        c2chemistry=parseInt(b11chemistry)+parseInt(b12chemistry);
+        d2chemistry=c2chemistry*0.25;
+        //12
+        b21chemistry=document.form1.b21.value;
+        b22chemistry=document.form1.b22.value;
+        c3chemistry=parseInt(b21chemistry)+parseInt(b22chemistry);
+        d3chemistry=c3chemistry*0.2;
+        //total
+        Fchemistry=parseInt(d1chemistry)+parseInt(d2chemistry)+parseInt(d3chemistry);
+
+        document.form1.bf.value =Fchemistry
+        //mb        
+        //10
+        bmb=document.form1.b.value;
+        d1mb=bmb*0.7143;
+        //11
+        b11mb=document.form1.c11.value;
+        b12mb=document.form1.c12.value;
+        c2mb=parseInt(b11mb)+parseInt(b12mb);
+        d2mb=c2mb*0.25;
+        //12
+        b21mb=document.form1.c21.value;
+        b22mb=document.form1.c22.value;
+        c3mb=parseInt(b21mb)+parseInt(b22mb);
+        d3mb=c3mb*0.2;
+        //total
+        Fmb=parseInt(d1mb)+parseInt(d2mb)+parseInt(d3mb);
+        document.form1.cf.value =Fmb
+        //Eng        
+        //10
+        bEng=document.form1.c.value;
+        d1Eng=bEng*0.7143;
+        //11
+        b11Eng=document.form1.d11.value;
+        b12Eng=document.form1.d12.value;
+        c2Eng=parseInt(b11Eng)+parseInt(b12Eng);
+        d2Eng=c2Eng*0.25;
+        //12
+        b21Eng=document.form1.d21.value;
+        b22Eng=document.form1.d22.value;
+        c3Eng=parseInt(b21Eng)+parseInt(b22Eng);
+        d3Eng=c3Eng*0.2;
+        //total
+        FEng=parseInt(d1Eng)+parseInt(d2Eng)+parseInt(d3Eng);
+
+        document.form1.df.value =FEng
+        //cs        
+        //10
+        bcs=document.form1.d.value;
+        d1cs=bcs*0.7143;
+        //11
+        b11cs=document.form1.e11.value;
+        b12cs=document.form1.e12.value;
+        c2cs=parseInt(b11cs)+parseInt(b12cs);
+        d2cs=c2cs*0.25;
+        //12
+        b21cs=document.form1.e21.value;
+        b22cs=document.form1.e22.value;
+        c3cs=parseInt(b21cs)+parseInt(b22cs);
+        d3cs=c3cs*0.2;
+        //total
+        Fcs=parseInt(d1cs)+parseInt(d2cs)+parseInt(d3cs);
+
+        document.form1.ef.value =Fcs
+
+        //PERCENTAGE
+        cp=parseInt(FPhysics)+parseInt(Fchemistry)+parseInt(Fmb)+parseInt(FEng)+parseInt(Fcs);
+        dp=cp/5
+
+        document.form1.pf.value =dp
+        
+        
+    }
+    //-->
+    </script>
+    <br>   
+    <form method="post" name="form1">        
+        <table align="center" border="0" height="10px">
+            <!--R-->
+            <tr>
+                <td align="middle" colspan="2">
+                  Standard- 10
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="2">
+                  <strong>(NOTE:-ENTER MARKS OBTAINED IN <br> EXTERNAL BORD EXAM OUT OF 70)</strong>
+                </td>
+            </tr>
+            <!--R1-->
+            <tr>
+                <td>Science</td>
+                <td><input name="a"placeholder="Enter 10th science Mark" type="number" ></td>
+            </tr>
+            <!--R2-->
+            <tr>
+                <td>Maths</td>
+                <td><input name="b" placeholder="Enter 10th Maths Mark"type="number"></td>
+            </tr>
+            <!--R3-->
+            <tr>
+                <td>English</td>
+                <td><input name="c" placeholder="Enter 10th English Mark"type="number"></td>
+            </tr>
+            <!--R4-->
+            <tr>
+                <td >Computer/Sanskrit</td>
+                <td><input name="d"placeholder="Enter 10th Computer/Sanskrit Mark"type="number"></td>
+            </tr>
+            <!--R-->
+            <tr>
+                <td align="middle" colspan="3">
+                    Standard- 11
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="2">
+                  <strong>(NOTE:-ENTER MARKS OBTAINED IN <br>FRIST & SECOND EXAM OUT OF 50)</strong>
+                </td>
+            </tr>
+            <!--R0-->
+            <tr>
+                <td>Physics (Frist Exam)</td>
+                <td><input name="a11"placeholder="Enter 11th Physics Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Physics (Second Exam)</td>
+                <td><input name="a12"placeholder="Enter 11th Physics Second Mark"type="number"></td>
+            </tr>
+            <!--R1-->
+            <tr>
+                <td>Chemistry (Frist Exam)</td>
+                <td><input name="b11"placeholder="Enter 11th Chemistry Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Chemistry (Second Exam)</td>
+                <td><input name="b12"placeholder="Enter 11th Chemistry Second Mark"type="number"></td>
+            </tr>
+            <!--R2-->
+            <tr>
+                <td>Maths/Biology (Frist Exam)</td>
+                <td><input name="c11"placeholder="Enter 11th Maths/Biology Frist Mark" type="number"></td>
+            </tr>
+            <tr>
+                <td>Maths/Biology (Second Exam)</td>
+                <td><input name="c12"placeholder="Enter 11th Maths/Biology Second Mark" type="number"></td>
+            </tr>
+            <!--R3-->
+            <tr>
+                <td>English (Frist Exam)</td>
+                <td><input name="d11"placeholder="Enter 11th English Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>English (Second Exam)</td>
+                <td><input name="d12"placeholder="Enter 11th English Second Mark"type="number"></td>
+            </tr>
+            <!--R4-->
+            <tr>
+                <td>Computer/Sanskrit (Frist Exam)</td>
+                <td><input name="e11"placeholder="Enter 11th Computer/Sanskrit Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Computer/Sanskrit (Second Exam)</td>
+                <td><input name="e12"placeholder="Enter 11th Computer/Sanskrit Second Mark"type="number"></td>
+            </tr>
+            <!--R-->
+            <tr>
+                <td align="middle" colspan="3">
+                    Standard- 12
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="2">
+                  <strong>(NOTE:-ENTER MARKS OBTAINED IN <br>FRIST EXAM OUT OF 100,<br> AEKAM KSHOTI OUT OF 25)</strong>
+                </td>
+            </tr>
+            <!--R0-->
+            <tr>
+                <td>Physics (Frist Exam)</td>
+                <td><input name="a21"placeholder="Enter 12th Physics Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Physics (Aekam Kshoti Mark)</td>
+                <td><input name="a22"placeholder="Enter 12th Physics Aekam Kshoti Mark"type="number"></td>
+            </tr>
+            <!--R1-->
+            <tr>
+                <td>Chemistry (Frist Exam)</td>
+                <td><input name="b21"placeholder="Enter 12th Chemistry Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Chemistry (Aekam Kshoti Mark)</td>
+                <td><input name="b22"placeholder="Enter 12th Chemistry Aekam Kshoti Mark"type="number"></td>
+            </tr>
+            <!--R2-->
+            <tr>
+                <td>Maths/Biology (Frist Exam)</td>
+                <td><input name="c21"placeholder="Enter 12th Maths/Biology Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Maths/Biology (Aekam Kshoti Mark)</td>
+                <td><input name="c22"placeholder="Enter 12th Maths/Biology Aekam Kshoti Mark"type="number"></td>
+            </tr>
+            <!--R3-->
+            <tr>
+                <td>English (Frist Exam)</td>
+                <td><input name="d21"placeholder="Enter 12th English Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>English (Aekam Kshoti Mark)</td>
+                <td><input name="d22"placeholder="Enter 12th English Aekam Kshoti Mark"type="number"></td>
+            </tr>
+            <!--R4-->
+            <tr>
+                <td>Computer/Sanskrit (Frist Exam)</td>
+                <td><input name="e21"placeholder="Enter 12th Computer/Sanskrit Frist Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td>Computer/Sanskrit (Aekam Kshoti Mark)</td>
+                <td><input name="e22"placeholder="Enter 12th Computer/Sanskrit Aekam Kshoti Mark"type="number"></td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="1"><input onclick="Result()" type="button" value="Calculate"></td>
+                <td align="middle" colspan="1"><input type="reset" value="Reset"></td>
+            </tr>
+            <!--R-->
+            <tr>
+                <td align="middle" colspan="3">
+                    Final
+                </td>
+            </tr>
+            <tr>
+                <td align="middle" colspan="3">
+                    PERCENTAGE:- <input name="pf"type="number"> %
+                </td>
+            </tr>
+            <!--R0-->
+            <tr>
+                <td>Physics</td>
+                <td><input name="af"type="number"></td>
+            </tr>
+            <!--R1-->
+            <tr>
+                <td>Chemistry</td>
+                <td><input name="bf"type="number"></td>
+            </tr>
+            <!--R2-->
+            <tr>
+                <td>Maths/Biology</td>
+                <td><input name="cf" type="number"></td>
+             </tr>
+            <!--R3-->
+            <tr>
+                <td>English</td>
+                <td><input name="df"type="number"></td>
+            </tr>
+            <!--R4-->
+            <tr>
+                <td>Computer/Sanskrit</td>
+                <td><input name="ef"type="number"></td>
+            </tr>
+        </table>        
+    </form>    
+    </body>
+</html>
